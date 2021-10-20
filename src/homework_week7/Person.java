@@ -31,7 +31,7 @@ public class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age < 0 || age > 100) this.age = 0; else this.age = age;
     }
 
     public boolean isTeen() {
@@ -39,7 +39,9 @@ public class Person {
     }
 
     public String getFullName() {
-        if (firstName.isEmpty() || lastName.isEmpty()) return "";
+        if (firstName.isEmpty() && lastName.isEmpty()) return "";
+        else if (firstName.isEmpty()) return firstName;
+        else if (lastName.isEmpty()) return lastName;
         else return firstName + lastName;
     }
 
