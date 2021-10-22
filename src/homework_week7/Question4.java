@@ -21,13 +21,22 @@ import java.util.Scanner;
  */
 public class Question4 {
     public static boolean isLeapYear(int year) {
-        if (!(year >= 1 && year <= 9999)) return false;
+        if (!(year >= 1 && year <= 9999)) {
+            System.out.println("year is not in the range 1 to 9999");
+            return false;
+        };
         return year % 400 == 0 || (year % 100 != 0 && (year % 4 == 0)); // Check for leap year
     }
 
     public static int getDaysInMonth(int month, int year) {
-        if (month < 1 || month > 12) return -1;
-        if (year < 1 || year > 9999) return -1;
+        if (month < 1 || month > 12) {
+            System.out.println("month is invalid");
+            return -1;
+        };
+        if (year < 1 || year > 9999) {
+            System.out.println("year is outside the range of 1 to 9999");
+            return -1;
+        };
         boolean isLeapYear = isLeapYear(year); // Check for leap year
         int daysInMonth = 0;
         if (isLeapYear) {
