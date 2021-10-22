@@ -9,34 +9,22 @@ import java.util.Scanner;
 public class Question8 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter city name: ");
+        System.out.print("Enter character from A to F: ");
         String cityName = in.next();
         char start = cityName.charAt(0);
         //ifElse statement used
-        if (start == 'A') {
-            System.out.println(start);
-        } else if (start == 'B') {
-            System.out.println(start);
-        } else if (start == 'C') {
-            System.out.println(start);
-        } else if (start == 'D') {
-            System.out.println(start);
-        } else if (start == 'E') {
-            System.out.println(start);
-        } else if (start == 'F') {
-            System.out.println(start);
-        } else if (start == 'a') {
-            System.out.println(start);
-        } else if (start == 'b') {
-            System.out.println(start);
-        } else if (start == 'c') {
-            System.out.println(start);
-        } else if (start == 'd') {
-            System.out.println(start);
-        } else if (start == 'e') {
-            System.out.println(start);
-        } else if (start == 'f') {
-            System.out.println(start);
+        if (start == 'A' || start == 'a') {
+            System.out.println("Ahmedabad");
+        } else if (start == 'B' || start == 'b') {
+            System.out.println("Bangalore");
+        } else if (start == 'C' || start == 'c') {
+            System.out.println("Cambridge");
+        } else if (start == 'D' || start == 'd') {
+            System.out.println("Devon");
+        } else if (start == 'E' || start == 'e') {
+            System.out.println("Edinburgh");
+        } else if (start == 'F' || start == 'f') {
+            System.out.println("Frankfurt");
         } else {
             System.out.println("Invalid entry");
         }
